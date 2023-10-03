@@ -119,50 +119,65 @@ $(document).ready(function () {
 
   }).to(".chapter_vector svg", {
     scale: 1,
-    duration: 3,
-    ease: Expo.easeInOut,
+    duration: 5,
+    opacity: 1,
+    ease: "ease",
   }).to('#clock', {
-    rotation: -560, // Rotate 360 degrees in the opposite direction
-    duration: 2,
+    rotation: -1060, // Rotate 360 degrees in the opposite direction
+    duration: 10,
     transformOrigin: 'center center',
-    ease: 'power2.inOut',
-  }).to('#clock path[style*="opacity: 0;"]', {
+    ease: "ease",
+  }, 1).to('#clock path[style*="opacity: 0;"]', {
     opacity: 1,
     duration: 1,
-    stagger: 0.2
+    stagger: 0.2,
+    ease: "ease",
   }, 1).to('#inner #inner-top', {
     rotation: 1060, // Rotate 360 degrees in the opposite direction
-    duration: 5,
+    duration: 10,
     transformOrigin: 'center center',
+    ease: "ease",
   }, 1).to('#inner #inner-3', {
     rotation: -1060, // Rotate 360 degrees in the opposite direction
-    duration: 5,
+    duration: 10,
     transformOrigin: 'center center',
+    ease: "ease",
   }, 1).to('#inner #inner-7', {
     rotation: -1060, // Rotate 360 degrees in the opposite direction
-    duration: 5,
+    duration: 10,
     transformOrigin: 'center center',
   }, 1).to('.chapter_ch2_1_content', {
+    duration: 5,
+    transform: "translate(-50%, -50%) scale(1)",
+    ease: "ease",
+  }).to('.chapter_ch2_1_content', {
     width: '100%',
     height: '100%',
+    duration: 5,
     borderRadius: 0,
-    duration: 2,
-    transform: "translate(-50%, -50%) scale(1)",
+    ease: "ease",
   }).to(".section-ch2-1 .chapetr_name", {
     zIndex: 4,
     color: "#fff",
+    duration: 5,
+    ease: "ease",
   }, "<").to(".section-ch2-1 .chapetr_name", {
     y: -200,
+    duration: 5,
+    ease: "ease",
   }).to(".section-ch2-1 .chapter_ch2_1_content h5", {
     opacity: 1,
     y: 10,
+    duration: 5,
+    ease: "ease",
+    ease: "ease",
   })
 
   ScrollTrigger.create({
     trigger: ".section-ch2-1",
     start: "top top",
     end: "bottom end",
-    scrub: .8,
+    scrub: 2,
     pin: true,
     pinSpacing: true, // Set to false for stacking
     animation: animation4Timeline,
